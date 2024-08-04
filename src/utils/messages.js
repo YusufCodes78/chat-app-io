@@ -3,7 +3,6 @@ const generateMessage = (text, username)=>{
         username,
         text,
         createdAt: new Date().getTime(),
-        type
     }
 }
 const generateLocationMessage = (url, username)=>{
@@ -11,7 +10,6 @@ const generateLocationMessage = (url, username)=>{
         username,
         url,
         createdAt: new Date().getTime(),
-        type
     }
 }
 
