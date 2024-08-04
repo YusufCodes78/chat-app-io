@@ -10,6 +10,7 @@ import { addUser, removeUser, getUser, getUsersInRoom } from './utils/users.js';
 const app = express();
 const server = createServer(app);
 const io = new Server(server);
+const PORT = process.env.PORT || 8000;
 
 // Resolve __dirname
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -68,6 +69,6 @@ io.on('connection', (socket) => {
 });
 
 // Start the server
-server.listen(3000, () => {
-  console.log('Server running at http://localhost:3000');
+server.listen(PORT, () => {
+  console.log('Server running at http://localhost:' + PORT);
 });
