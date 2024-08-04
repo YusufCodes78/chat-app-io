@@ -1,0 +1,196 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+/* ================================HOME PAGE============================ */
+.join {
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.join h1{
+  font-size: 30px;
+  margin: 10px;
+  color: white;
+}
+.join-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  min-height: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.join-container h2 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: gray;
+  font-size: 16px;
+}
+
+.form-group input {
+  padding: 15px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 15px;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.form-group input:focus {
+  border-color: darkslateblue;
+  outline: none;
+}
+
+.btn__join {
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 100%;
+  margin: 20px 0;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(164, 150, 255);
+}
+/* ================================CHAT PAGE============================ */
+.chat {
+  margin: 10px;
+  display: flex;
+  height: 100vh;
+}
+.chat__sidebar {
+  width: 250px; /* Set the desired width of the sidebar */
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.chat__main {
+  flex: 1; /* Occupies the remaining space */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.chat__messages {
+  flex: 1; /* Make messages area grow and take up available space */
+  overflow-y: auto; /* Allow scrolling */
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 10px;
+  padding-bottom: 70px;
+  margin-bottom: 10px;
+  gap: 5px;
+  scroll-behavior: smooth;
+}
+.chat__compose {
+  position: fixed; /* Sticks the div to the bottom of the screen */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Makes the div occupy full width */
+  background-color: #f5f5f7; /* Optional: background color for visibility */
+  padding: 10px; /* Optional: some padding around the content */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+.chat__compose form {
+  display: flex;
+  gap: 10px; /* Optional: adds space between the input and buttons */
+  width: 100%;
+}
+.chat__compose input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 15px;
+}
+.chat__compose button {
+  background-color: darkslateblue;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: large;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.chat__compose button:disabled {
+  background-color: rgb(164, 150, 255);
+}
+#send-location {
+  margin-right: 20px;
+}
+.message {
+  padding: 10px;
+  background-color: whitesmoke;
+  align-self: flex-start;
+  width: auto;
+  border-radius: 15px;
+}
+.admin__message{
+  align-self: center;
+  width: auto;
+  background: rgb(255, 255, 181);
+  border-radius: 15px;
+  padding: 2px 10px;
+}
+.message__name {
+  font-size: 12px;
+  font-weight: bold;
+}
+.message__meta {
+  font-size: 12px;
+}
+.message__text {
+  font-size: 16px;
+  font-weight: 400;
+  padding-right: 10px;
+}
+.admin__message__text {
+  font-size: 14px;
+  font-weight: bold;
+}
+.chat__room__username{
+  padding: 8px;
+  background-color: #ccc;
+  margin: 5px;
+  border-radius: 15px;
+  color: #333;
+}

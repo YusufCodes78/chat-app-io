@@ -1,0 +1,81 @@
+<!-- /public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatApp.io - Chat with friends in a private room!</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/img/favicon.png" />
+  </head>
+  <body>
+    <div class="chat">
+      <div id="room" class="chat__sidebar"></div>
+      <div class="chat__main">
+        <div id="messages-div" class="chat__messages"></div>
+        <div class="chat__compose">
+          <form id="form">
+            <input
+              type="text"
+              placeholder="Enter a message"
+              name="message"
+              autocomplete="off"
+              required
+            />
+            <button id="btn">Send</button>
+            <button id="send-location">Send Location</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Socket.io and other scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <!-- Templates for messages -->
+
+    <script id="message-template" type="text/html">
+      <div class="message">
+        <div class="message__name">{{username}}</div>
+        <div>
+          <span class="message__text">{{message}}</span
+          ><span class="message__meta">{{createdAt}}</span>
+        </div>
+      </div>
+    </script>
+
+    <script id="admin-template" type="text/html">
+      <div class="admin__message">
+        <!-- <div class="message__name">{{username}}</div> -->
+        <div>
+          <span class="admin__message__text">{{message}}</span
+          >
+          <!-- <span class="message__meta">{{createdAt}}</span> -->
+        </div>
+      </div>
+    </script>
+
+    <script id="location-message-template" type="text/html">
+      <div class="message">
+        <div class="message__name">{{username}}</div>
+        <div>
+            <span class="message__text"><a href="{{url}}" target="_blank">Location</a></span
+            ><span class="message__meta">{{createdAt}}</span>
+            </div>
+        </div>
+      </div>
+    </script>
+    <script id="room-template" type="text/html">
+      <div class="chat__room">
+        <h1>Room: {{room}}</h1>
+        <h2>Users:</h2>
+        <div class="chat__room__users">
+            <div>{{#users}}<div class="chat__room__username">{{username}}</div>{{/users}}</div>
+        </div>
+        </div>
+      </div>
+    </script>
+    <script src="/js/chat.js"></script>
+  </body>
+</html>

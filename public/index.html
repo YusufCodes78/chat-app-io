@@ -1,0 +1,30 @@
+<!-- /public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatApp.io - Chat with friends in a private room!</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" href="/img/favicon.png" />
+  </head>
+  <body>
+    <div class="join">
+        <h1>ChatApp.io</h1>
+      <div class="join-container">
+        <h2>Join</h2>
+        <form id="join-form" action="/chat.html">
+          <div class="form-group">
+            <label for="display-name">Display Name</label>
+            <input type="text" id="display-name" name="username" placeholder="Enter your name" autocomplete="off" required />
+          </div>
+          <div class="form-group">
+            <label for="room">Room</label>
+            <input type="text" id="room" name="room" placeholder="Enter room" autocomplete="off" required />
+          </div>
+          <button type="submit" class="btn__join">Join</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
